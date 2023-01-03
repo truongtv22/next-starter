@@ -59,7 +59,7 @@ export default function CartDropdown() {
                     <div className="relative grid gap-6 bg-white dark:bg-neutral-800 p-7">
                       <h3 className="text-xl font-semibold">Cart</h3>
                       <div className="grid gap-4">
-                        <div className="grid gap-4 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300 scrollbar-thumb-rounded-full scrollbar-track-rounded-full max-h-60">
+                        <div className="grid gap-4 pr-3 -mr-3 overflow-y-auto scrollbar-w-1 scrollbar-thin scrollbar-thumb-neutral-400 scrollbar-track-neutral-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full max-h-60">
                           {cartItems.map((item) => (
                             <div key={item.id} className="relative">
                               <div className="flex space-x-2 justify-between">
