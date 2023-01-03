@@ -1,8 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { MantineProvider } from '@mantine/core';
 
-import '../styles/globals.css';
 import '../styles/index.scss';
 
 function MyApp({ Component, pageProps }) {
@@ -15,11 +13,9 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <MantineProvider withGlobalStyles withNormalizeCSS>
-        <div className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
-          <Component {...pageProps} />
-        </div>
-      </MantineProvider>
+      <div className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
