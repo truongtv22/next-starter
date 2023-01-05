@@ -38,8 +38,11 @@ const DEMO_DATA = [
   },
 ];
 
-export default function SectionClientSay({ className = '' }) {
-  const UNIQUE_CLASS = `SectionClientSay_glide`;
+export default function SectionClientSay({
+  className = '',
+  uniqueClassName = '',
+}) {
+  const UNIQUE_CLASS = 'SectionClientSay_glide' + uniqueClassName;
 
   useEffect(() => {
     if (document.querySelector(`.${UNIQUE_CLASS}`)) {

@@ -1,3 +1,5 @@
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+
 import twFocusClass from '../../utils/twFocusClass';
 
 export default function NextPrev({
@@ -23,7 +25,7 @@ export default function NextPrev({
           title="Prev"
           data-glide-dir="<"
         >
-          <i className="las la-angle-left"></i>
+          <ChevronLeftIcon className="w-4 h-4" />
         </button>
       )}
       {!onlyPrev && (
@@ -33,7 +35,7 @@ export default function NextPrev({
           title="Next"
           data-glide-dir=">"
         >
-          <i className="las la-angle-right"></i>
+          <ChevronRightIcon className="w-4 h-4" />
         </button>
       )}
     </div>

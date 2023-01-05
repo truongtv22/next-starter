@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import NextImage from 'next/image';
 
 import checkInViewIntersectionObserver from '../../utils/isInViewPortIntersectionObserver';
 import PlaceIcon from './PlaceIcon';
@@ -9,8 +8,6 @@ export default function NcImage({
   alt = 'nc-imgs',
   src = '',
   className = 'object-cover w-full h-full',
-  blurWidth,
-  blurHeight,
   ...args
 }) {
   let isMounted = false;
@@ -82,7 +79,7 @@ export default function NcImage({
   return (
     <div className={`${containerClassName}`} ref={_containerRef}>
       {__src && imageLoaded ? (
-        <NextImage src={__src} className={className} alt={alt} priority={true} {...args} />
+        <img src={__src} className={className} alt={alt} {...args} />
       ) : (
         renderLoadingPlaceholder()
       )}
